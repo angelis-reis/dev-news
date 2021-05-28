@@ -3,14 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const HeaderStyle = styled.div`
-	position: fixed;
+	/* position: fixed; */
 	top: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
 	padding-left: 32px;
-
+	margin-bottom: 150px;
 	height: 48px;
 	background-color: black;
 	border-bottom: 1px solid rgba(168, 179, 207, 0.2);

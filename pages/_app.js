@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import 'fontsource-roboto';
 import './styles/global.css';
 
 // const Body = styled.div`
