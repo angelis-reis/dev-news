@@ -20,7 +20,7 @@ export default function Home() {
 
 	async function fetchNews() {
 		const requestNews = await axios.get(
-			`https://newsapi.org/v2/top-headlines?sources=google-news-br&apiKey=${newsApiKey}`
+			`https://newsapi.org/v2/everything?q=javascript&sortBy=popularity&language=pt&apiKey=${newsApiKey}`
 		);
 		console.log('Koca: requestNews ', requestNews);
 
