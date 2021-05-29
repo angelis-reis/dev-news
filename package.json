@@ -10,6 +10,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
+    "axios": "^0.21.1",
     "dejavu-fonts-ttf": "^2.37.3",
     "fontsource-roboto": "^4.0.0",
     "material-components-web": "^11.0.0",

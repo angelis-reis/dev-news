@@ -9,11 +9,11 @@ import CommentIcon from '@material-ui/icons/Comment';
 const CardStyle = styled.div`
 	/* max-width: 340px;
 	min-width: 270px; */
-	width:280px;
+	width: 280px;
 	padding: 8px 0;
 	/* -webkit-box-direction: normal; */
 	/* -webkit-box-orient: vertical; */
-	height: 360px;
+	height: 380px;
 	border: 1px solid rgba(233, 234, 236, 0.08);
 	border-radius: 16px;
 	/* box-shadow: 0 0 80px -15px rgba(0, 0, 0, 0.4); */
@@ -25,6 +25,10 @@ const CardStyle = styled.div`
 
 	&:hover {
 		border: 1px solid #474b52;
+	}
+
+	a {
+		text-decoration: none;
 	}
 
 	.cardHeader {
@@ -44,13 +48,13 @@ const CardStyle = styled.div`
 	.postLink {
 		text-decoration: none;
 		display: grid;
-		grid-template-rows: 70px 45px 160px;
+		grid-template-rows: 90px 45px 160px;
 		cursor: pointer;
 	}
 
 	.postTitle {
 		color: #fff;
-		font-size: 14px;
+		font-size: 12px;
 		font-weight: 300;
 		letter-spacing: 0.56px;
 		line-height: 20px;
@@ -90,7 +94,7 @@ const CardStyle = styled.div`
 	}
 `;
 
-export default function NewsCard() {
+export default function NewsCard(props) {
 	return (
 		<CardStyle>
 			<div className='cardHeader'>
@@ -99,27 +103,22 @@ export default function NewsCard() {
 					alt='Post Image'
 				/>
 			</div>
-			<Link href='https://increment.com/containers/containers-and-open-source/'>
+			<a target='_blank' href={props.newsLink}>
 				<div className='postLink'>
-					<div className='postTitle'>
-						Este é um valor de título hardcoded no codigo
-					</div>
-					<div className='postMetadata'>Publicado em 17/05/21</div>
+					<div className='postTitle'>{props.newsTitle}</div>
+					<div className='postMetadata'>{props.newsMetadata}</div>
 					<div className='cardImage'>
-						<img
-							src='https://tsh.io/wp-content/uploads/fly-images/19067/documenting-c4-810x531.jpg'
-							alt='Post Image'
-						/>
+						<img src={props.urlImg} alt='Post Image' />
 					</div>
 				</div>
-			</Link>
+			</a>
 
-			<div className='postButtons'>
+			{/* <div className='postButtons'>
 				<ArrowUpwardIcon />
 				<span>43</span>
 				<CommentIcon className='commentIcon' />
 				<span>5</span>
-			</div>
+			</div> */}
 		</CardStyle>
 	);
 }

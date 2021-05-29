@@ -1,16 +1,10 @@
-import styled from 'styled-components';
+
 import 'fontsource-roboto';
 import './styles/global.css';
 
-// const Body = styled.div`
-// 	background-color: black;
-// 	width: 100%;
-// 	height: 100vh;
-// 	color: white;
-// 	text-align: center;
-// `;
-
 function MyApp({ Component, pageProps }) {
+	
+
 	return (
 		// <Body>
 		<Component {...pageProps} />
