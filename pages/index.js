@@ -6,7 +6,6 @@ import NewsCard from '../components/NewsCard';
 const NewsWrapper = styled.div`
 	margin-left: 70px;
 	margin-right: 70px;
-
 	display: inline-flex;
 	flex-wrap: wrap;
 	gap: 22px;
